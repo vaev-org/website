@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>⛵️ Vaev | the *kool* browser engine</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body onload="ready()">
+    <div id="wind-layer">
+    </div>
+    <div class='wave -one'>
+        <img id="blob" src="koolBlob.png" alt="here is Bob, Bob the kool blob" style="
+            position: fixed;
+            height: 4rem;
+            top: 23rem;
+            left: 12rem;
+            transform: rotate(112deg);
+        ">
+
+        <img id="blob2" src="koolBlob.png" alt="here is Bob, Bob the kool blob" style="
+                position: fixed;
+    height: 5rem;
+    top: 21rem;
+    right: 12rem;
+    transform: rotate(240deg);
+        ">
+    </div>
+    <div class="right-fixed">
+        <h1>VAEV</h1>
+    </div>
+    <div class="center-menu">
+        <div class="action">Project</div>
+        <div class="action">Documentation</div>
+        <div class="action">Team</div>
+    </div>
+    <div class="left-fixed">
+        website crafted with 💙 by <a href="https://carbonlab.dev">Lou !</a>
+    </div>
+    <div class="center">
+        <h2>the <span>*KOOL*</span> browser engine</h2>
+    </div>
+    <div id="surf"></div>
+    <script>
+        function makeParticles(layer) {
+            const N = 32
+            const HEIGHT = window.innerHeight
+            let particles = [];
+
+            for (let i = 0; i < N; i += 1) {
+                particles.push(document.createElement('div'))
+                particles[i].className = "wind-particle"
+                particles[i].style.top = (Math.random() * HEIGHT*1.2).toString() + "px"
+                particles[i].style.animation = `falling ${Math.random()*5+1}s linear ${Math.random()*1}s infinite`
+                layer.appendChild(particles[i])
+            }
+        }
+
+        function ready() {
+            const layer = document.getElementById('wind-layer');
+            makeParticles(layer);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+body {
+    --blue: #98E9FF;
+
+    color: black;
+    background-color: var(--blue);
+    font-family: Inter, sans-serif;
+    font-weight: bolder;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100svh;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.wave {
+    opacity: .8;
+    position: absolute;
+    top: -150vh;
+    left: -5vw;
+    background: #fff9f0;
+    width: 120vw;
+    height: 120vw;
+    transform-origin: 50% 48%;
+    border-radius: 43%;
+    animation: drift 8000ms infinite linear;
+}
+
+@keyframes drift {
+    from { transform: rotate(0deg); }
+    from { transform: rotate(360deg); }
+}
+
+.wind-particle{
+    position: absolute;
+    right: -20px;
+    width: 29px;
+    height: 3px;
+    border-radius: 0 20px;
+    background-color: #a1a1a1;
+    transform: rotate(0deg);
+    opacity: 0.7;
+}
+
+#wind-layer{
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    z-index: 10;
+}
+
+
+@keyframes falling {
+    0% {
+        transform: translate3d(0,0,0) rotate(0deg);
+    }
+
+    100% {
+        transform: translate3d(-103vw,0vh,0) rotate(15deg);
+
+    }
+}
+
+.center-menu{
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+    gap: 1rem;
+    box-sizing: border-box;
+    background: var(--blue);
+    padding: 0.6rem;
+    border-radius: 4rem;
+    z-index: 10;
+}
+
+.action{
+    padding: 0.6rem 1.6rem;
+    cursor: pointer;
+}
+
+.center {
+    height: 100svh;
+    width: 100vw;
+    position: absolute;
+    z-index: 7;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center span{
+    text-decoration: underline wavy black;
+ }
+
+
