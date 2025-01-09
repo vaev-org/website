@@ -20,10 +20,11 @@ body {
 .wave {
     opacity: .8;
     position: absolute;
-    top: -150vh;
+    bottom: 8vh;
     left: -5vw;
     background: #fff9f0;
     width: 120vw;
+    z-index: 2;
     height: 120vw;
     transform-origin: 50% 48%;
     border-radius: 43%;
@@ -86,6 +87,15 @@ body {
     z-index: 10;
 }
 
+.center-menu .action:hover{
+    border-radius: 2rem;
+    background: var(--blue);
+    transition: background-color 200ms;
+}
+.center-menu .action:hover{
+    background: white;
+}
+
 .action{
     padding: 0.6rem 1.6rem;
     cursor: pointer;
@@ -106,4 +116,42 @@ body {
     text-decoration: underline wavy black;
  }
 
+#texture{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100svh;
+    z-index: 1;
+    background-image: url('./paper.avif');
+    background-size: 100% 100%;
+    background-repeat: repeat;
+    opacity: 0.4;
+}
 
+.left-fixed {
+    position: fixed;
+    right: 0;
+    margin: 2rem 3rem;
+    z-index: 10;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:visited{
+    color: black;
+}
+
+.right-fixed {
+    position: fixed;
+    left: 0;
+    margin: 2rem 3rem;
+    z-index: 10;
+}
+
+.right-fixed h1{
+    margin: 0;
+}
