@@ -1,0 +1,192 @@
+body {
+    --blue: #98E9FF;
+    --bg: #f0f0f0;
+
+    color: black;
+    background-color: var(--bg);
+    font-family: Inter, sans-serif;
+    font-weight: bolder;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100svh;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.center-menu{
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+    gap: 1rem;
+    box-sizing: border-box;
+    background: var(--blue);
+    padding: 0.6rem;
+    border-radius: 4rem;
+    z-index: 10;
+}
+
+.center-menu .action:hover{
+    border-radius: 2rem;
+    background: var(--bg);
+    transition: background-color 200ms;
+}
+
+.action{
+    padding: 0.6rem 1.6rem;
+    cursor: pointer;
+}
+
+.center {
+    height: 100svh;
+    width: 100vw;
+    position: absolute;
+    z-index: 7;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center span{
+    text-decoration: underline wavy black;
+ }
+
+.left-fixed {
+    position: fixed;
+    right: 0;
+    margin: 2rem 3rem;
+    z-index: 10;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:visited{
+    color: black;
+}
+
+.right-fixed {
+    position: absolute;
+    left: 0;
+    margin: 2rem 3rem;
+    z-index: 10;
+}
+
+.right-fixed h1{
+    margin: 0;
+}
+
+.action.selected{
+    border-radius: 2rem;
+    border: 1px solid black;
+    background: #f7fcff;
+}
+
+.inline{
+    display: flex;
+    gap: 1rem;
+}
+
+.btn{
+    padding: 0.6rem 1.6rem;
+    cursor: pointer;
+    border-radius: 12px;
+    background: var(--blue);
+    color: black;
+    font-weight: bold;
+}
+
+.member{
+    background-color: #fff;
+    border-radius: 20px;
+    color: #242424;
+    box-shadow: 7px 9px 30px #00000038;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 32px 32px 24px;
+    max-width: 300px;
+}
+
+.member p{
+    font-weight: normal;
+    margin: 8px 0 16px;
+}
+
+.member h3{
+    margin: 0;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.member-list{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 80vw;
+}
+
+.page{
+    padding: 8rem 0;
+    height: fit-content;
+}
+
+hr{
+    width: 100%;
+}
+
+.blue {
+    background-color: #bdc7d9;
+}
+
+.blue hr {
+    border-color: #1e305178;
+    border-top: 0;
+}
+
+.blue .btn{
+    background: #496089;
+    color: #f5f6ff;
+}
+
+.coral{
+    background-color: #ffc0c0;
+}
+
+.coral hr{
+    border-color: rgba(165, 98, 64, 0.47);
+    border-top: 0;
+}
+
+.coral .btn{
+    background: #b34242;
+    color: #f5f6ff;
+}
+
+.peach{
+    background-color: #f5cfae;
+}
+
+.peach hr{
+    border-color: rgba(165, 98, 64, 0.47);
+    border-top: 0;
+}
+
+.peach .btn{
+    background: #a6633a;
+    color: #f5f6ff;
+}
+
+h3:first-letter {
+    font-size: 1.5rem;
+}
