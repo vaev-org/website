@@ -237,7 +237,7 @@ h2{
     }
 
     .wave{
-        animation: drift 6000ms infinite linear;
+        animation: drift 8000ms infinite linear;
     }
 
     h2 {
