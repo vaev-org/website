@@ -5,6 +5,7 @@
     <title>⛵️ Vaev | the *kool* browser engine</title>
     <link rel="stylesheet" href="style.css">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -14,21 +15,18 @@
     <div id="wind-layer">
     </div>
     <div class='wave -one'>
-        <img id="blob" src="koolBlob.png" alt="here is Bob, Bob the kool blob" style="
-                position: relative;
-    height: 4rem;
-    top: 29vw;
-    left: 3vw;
-    transform: rotate(112deg);
-        ">
+        <div class="wave-anchor" id="anchor-one">
+            <img class="blob" onpointerenter="triggerJump(event)" id="blob" src="koolBlob.png" alt="here is Bob, Bob the kool blob" style="--bsize: 4rem;
+    --top: 2rem;">
+            <img class="board" src="surf.svg" alt="here take some surf board" style="--bsize: 4rem; transform: scaleY(-1) rotate(6deg)">
+        </div>
 
-        <img id="blob2" src="koolBlob.png" alt="here is Bob, Bob the kool blob" style="
-                position: relative;
-    height: 5rem;
-    top: 21vw;
-    right: -105vw;
-    transform: rotate(240deg);
-        ">
+        <div class="wave-anchor" id="anchor-two">
+            <img class="blob" id="blob2" onpointerenter="triggerJump(event)" src="koolBlob.png" alt="here is Bob, Bob the kool blob" style="
+                --top: 3rem;
+    --bsize: 5rem;">
+            <img class="board" src="surf.svg" alt="here take some surf board" style="--bsize: 5rem; transform: scaleY(-1) rotate(6deg)">
+        </div>
     </div>
     <div class="right-fixed">
         <h1>VAEV</h1>
@@ -63,6 +61,14 @@
         function ready() {
             const layer = document.getElementById('wind-layer');
             makeParticles(layer);
+        }
+
+        function triggerJump(event){
+            const blob = event.currentTarget
+            blob.style.animation = 'backflip 0.5s ease'
+            setTimeout(() => {
+                blob.style.animation = ''
+            }, 500)
         }
     </script>
 </body>

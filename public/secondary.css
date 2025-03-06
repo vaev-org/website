@@ -1,5 +1,5 @@
 body {
-    --blue: #6ea5e8;
+    --blue: #cbe4ee;
     --bg: #f0f0f0;
 
     color: black;
@@ -203,7 +203,7 @@ footer{
     display: flex;
     align-items: center;
     width: 100%;
-    background: #496089;
+    background: var(--blue);
     justify-content: space-between;
     overflow: hidden;
     color: #f5f6ff;

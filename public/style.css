@@ -1,5 +1,6 @@
 body {
     --blue: #cbe4ee;
+    --size: 120vw;
 
     color: black;
     background-color: var(--blue);
@@ -23,9 +24,9 @@ body {
     bottom: 8vh;
     left: -8vw;
     background: #fff9f0;
-    width: 120vw;
+    width: var(--size);
     z-index: 2;
-    height: 120vw;
+    height: var(--size);
     transform-origin: 50% 48%;
     border-radius: 43%;
     animation: drift 8000ms infinite linear;
@@ -68,6 +69,27 @@ body {
     }
 }
 
+@keyframes backflip {
+    0% {
+        transform: translate3d(0,0,0) rotate(0deg);
+    }
+
+    40% {
+        transform: translate3d(0,-8rem,0) rotate(-180deg);
+
+    }
+
+    80% {
+        transform: translate3d(0,0vh,0) rotate(-360deg);
+
+    }
+
+    100% {
+        transform: translate3d(0,0vh,0) rotate(-360deg);
+
+    }
+}
+
 .center-menu{
     position: absolute;
     top: 3rem;
@@ -86,6 +108,7 @@ body {
     border-radius: 4rem;
     z-index: 10;
 }
+
 
 .center-menu .action:hover{
     border-radius: 2rem;
@@ -110,6 +133,7 @@ body {
     justify-content: center;
     margin-top: calc(50svh - 7.5rem);
     z-index: 11;
+    pointer-events: none;
 }
 
 .center span{
@@ -129,6 +153,7 @@ body {
     background-size: 100% 100%;
     background-repeat: repeat;
     opacity: 0.7;
+    pointer-events: none;
 }
 
 .left-fixed {
@@ -165,10 +190,93 @@ h2{
     text-align: center;
 }
 
+#anchor-one{
+    top: 29vw;
+    left: 0vw;
+    transform: rotate(112deg);
+}
+
+.blob{
+    position: relative;
+    z-index: 2;
+    --scale : 1;
+    top: calc(var(--top) * var(--scale));
+    height: calc(var(--bsize) * var(--scale));
+}
+
+.board{
+    --scale : 1;
+    height: calc(var(--bsize) * var(--scale));
+}
+
+#anchor-two{
+    top: 21vw;
+    right: -112vw;
+    transform: rotate(240deg);
+}
+
 @media(max-aspect-ratio: 11/9) {
     .left-fixed {
         bottom: 0;
         width: 100vw;
         text-align: center;
+        margin: 2rem 0;
     }
+
+}
+
+@media(orientation: portrait) {
+    .action{
+        padding: 0.4rem 1.1rem;
+        font-size: 0.8rem;
+    }
+
+    .left-fixed{
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .wave{
+        animation: drift 6000ms infinite linear;
+    }
+
+    h2 {
+        font-size: 1.9rem;
+    }
+
+    .center span{
+        text-underline-offset: 0.4rem;
+    }
+
+    body{
+        --size: 120svh;
+    }
+
+    .wave {
+        bottom: 22vh;
+        left: -36vw;
+    }
+
+    #anchor-one{
+        top: 29vh;
+        left: 0;
+    }
+
+    #anchor-two{
+        top: 21vh;
+        right: -112vh;
+    }
+
+    .blob,.board{
+        --scale: 0.5;
+    }
+}
+
+.wave-anchor{
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
