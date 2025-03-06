@@ -1,5 +1,5 @@
 body {
-    --blue: #98E9FF;
+    --blue: #6ea5e8;
     --bg: #f0f0f0;
 
     color: black;
@@ -10,9 +10,12 @@ body {
     margin: 0;
     padding: 0;
     width: 100vw;
-    height: 100svh;
-    justify-content: center;
+    height: fit-content;
     overflow-x: hidden;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100svh;
+    justify-content: space-between;
 }
 
 .center-menu{
@@ -107,6 +110,11 @@ a:visited{
     font-weight: bold;
 }
 
+.btn:hover{
+    opacity: 0.8;
+    transition: opacity 200ms;
+}
+
 .member{
     background-color: #fff;
     border-radius: 20px;
@@ -114,7 +122,6 @@ a:visited{
     box-shadow: 7px 9px 30px #00000038;
     display: flex;
     flex-direction: column;
-    margin: 1rem;
     padding: 32px 32px 24px;
     max-width: 300px;
 }
@@ -134,6 +141,7 @@ a:visited{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     max-width: 80vw;
+    gap: 2rem;
 }
 
 .page{
@@ -187,6 +195,62 @@ hr{
     color: #f5f6ff;
 }
 
-h3:first-letter {
+.member h3:first-letter {
     font-size: 1.5rem;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: #496089;
+    justify-content: space-between;
+    overflow: hidden;
+    color: #f5f6ff;
+    height: 30rem;
+}
+
+footer .bg-text{
+    position: relative;
+    font-size: 43rem;
+    color: var(--bg);
+    transform: translate(-8rem, 0rem);
+}
+
+footer .cat{
+    background: rgb(117 142 187 / 25%);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 2.5rem 3rem;
+    font-size: 1.2rem;
+    color: black;
+    display: flex;
+    font-weight: 400;
+    flex-direction: column;
+    width: fit-content;
+    align-items: center;
+}
+
+#contact{
+    position: absolute;
+    transform: translate(9rem, -5rem);
+    min-width: 24ch;
+}
+
+#credits{
+    position: absolute;
+    transform: translate(62vw, 3rem);
+}
+
+.btn.big{
+    text-align: center;
+    padding: 1.2rem;
+    background-color: var(--blue);
+    color: white;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    box-shadow: 7px 9px 30px #00000038;
+    font-weight: 400;
 }

@@ -1,5 +1,5 @@
 body {
-    --blue: #98E9FF;
+    --blue: #cbe4ee;
 
     color: black;
     background-color: var(--blue);
@@ -21,7 +21,7 @@ body {
     opacity: .8;
     position: absolute;
     bottom: 8vh;
-    left: -5vw;
+    left: -8vw;
     background: #fff9f0;
     width: 120vw;
     z-index: 2;
@@ -105,15 +105,17 @@ body {
     height: 100svh;
     width: 100vw;
     position: absolute;
-    z-index: 7;
     top: 0;
     display: flex;
-    align-items: center;
     justify-content: center;
+    margin-top: calc(50svh - 7.5rem);
+    z-index: 11;
 }
 
 .center span{
-    text-decoration: underline wavy black;
+    text-decoration: underline wavy;
+    text-decoration-color: deeppink;
+    text-underline-offset: 0.9rem;
  }
 
 #texture{
@@ -126,7 +128,7 @@ body {
     background-image: url('./paper.avif');
     background-size: 100% 100%;
     background-repeat: repeat;
-    opacity: 0.4;
+    opacity: 0.7;
 }
 
 .left-fixed {
@@ -134,6 +136,7 @@ body {
     right: 0;
     margin: 2rem 3rem;
     z-index: 10;
+    color: grey;
 }
 
 a{
@@ -154,4 +157,18 @@ a:visited{
 
 .right-fixed h1{
     margin: 0;
+}
+
+h2{
+    font-size: 5rem;
+    margin: 0;
+    text-align: center;
+}
+
+@media(max-aspect-ratio: 11/9) {
+    .left-fixed {
+        bottom: 0;
+        width: 100vw;
+        text-align: center;
+    }
 }

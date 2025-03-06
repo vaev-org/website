@@ -27,11 +27,67 @@
     <h2>Ideology</h2>
     <hr>
     <h2>History</h2>
+    <h3>Paper-muncher | Vaev at Odoo</h3>
+    <p></p>
+    <h3>Skift OS</h3>
     <hr>
     <h2>Performance and compliance</h2>
+    <p>For now we mostly focus on static websites, you can find our WPT compliance <a class="link" href="https://vaev-org.github.io/wpt-status/">on our dashboard</a>
+    Performance wise we are faster than everyone else for document generation.
+    </p>
+    <img src="performance.png" alt="Performance and peak memory comparison between all document generation tools">
+    <p>For interactive websites we are not yet ready to compete with the big players, we will focus on it after the static part of the web.
+    </p>
     <hr>
     <h2>Q & A</h2>
+    <div class="member-list">
+        <div class="member blue">
+            <h3>When is it coming ?</h3>
+            <hr>
+            <p>This project is currently in an experimental, proof-of-concept phase. Our focus is on exploring new ideas, optimizing performance, and developing core features for potential future integration with Odoo. Please note that we're not yet ready to commit to specific features, timelines, or release dates, and the project's direction may evolve based on our findings.</p>
+        </div>
+        <div class="member blue">
+            <h3>Why build a new browser in C++ when safer and more modern languages are available?</h3>
+            <hr>
+            <p>We're choosing pragmatism over ideals. C++ offers:
 
+                Scalability: Ideal for large projects.
+                Excellent Tooling: clangd, clang-tidy, clang-format, GCC, MSVC, Visual Studio, Clion, gdb, lldb, valgrin, etc.
+                Strong Typing: Enhances code safety and maintainability.
+                Familiarity: Easy for developers experienced in C-like languages (Java, C#, etc.) to adopt.
+                Safe Subset: We're using a carefully chosen subset of C++ to avoid common pitfalls.
+            </p>
+        </div>
+        <div class="member blue">
+            <h3>Does Vaev collect/sell your personal data?</h3>
+            <hr>
+            <p>Nope. Never have, never will. And we protect you from many of the advertisers who do. this is guaranteed by our independence</p>
+        </div>
+        <div class="member blue">
+            <h3>Can't we just use Chrome for the pdf?</h3>
+            <hr>
+            <p>While Chrome excels at small documents, it struggles with larger ones, consuming exponentially more memory and time. Its limited support for page media specs and header/footer customization makes it a poor fit for report generation. When dealing with large documents, Chrome's memory consumption skyrockets, leading to crashes and hangs. This is inherent to its design, optimized for interactive performance, not static media. Relying on Chrome would mean depending on hacks and workarounds that could break with every update.</p>
+        </div>
+        <div class="member blue">
+            <h3>Can't we just use Weasyprint for the pdf?</h3>
+            <hr>
+            <p>Weasyprint's strong support for paged media and decent handling of static media in HTML/CSS is commendable. However, its Python implementation makes it inherently slow. The good news? It's relatively small (~70k lines) and open source, so we can contribute and fix issues.</p>
+        </div>
+    </div>
 </div>
+<footer>
+    <div class="bg-text">VAEV</div>
+    <div class="cat" id="credits">
+        website crafted with 💙 by <a href="https://carbonlab.dev">Lou !</a>
+    </div>
+    <div class="cat" id="contact">
+        Contact us:
+        <ul>
+            <li><a href="mailto: loha@odoo.com">Lou (loha)</a></li>
+            <li><a href="mailto: clvb@odoo.com">Clem (clvb)</a></li>
+            <li><a href="mailto: palm@odoo.com">Paulo (palm)</a></li>
+        </ul>
+    </div>
+</footer>
 </body>
 </html>
